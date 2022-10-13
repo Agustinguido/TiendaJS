@@ -6,12 +6,17 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="style.css">
+  <!-- cdn boostrap -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+  <!-- CDN toastify -->
+  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+  <!-- fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap" rel="stylesheet">
-  
+
   <title>Road to 2022</title>
 </head>
 
@@ -19,7 +24,7 @@
   <header>
     <nav class="navbar navbar-expand-lg backgruond__stily navbar navbar-dark bg-dark">
       <div class="container-fluid">
-        <img class="logo__img" src="./src/img/logo.png" alt="">
+        <img class="logo__img" src="./img/logo.png" alt="">
         <button class="navbar-toggler collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
           aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
@@ -46,10 +51,9 @@
           </li>
         </ul>
       </div>
-
     </nav>
 
-    <div class="offcanvas offcanvas-end show" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel"
+    <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel"
       aria-modal="true" role="dialog">
       <div class="offcanvas-header productsMenu">
         <h5 id="offcanvasRightLabel">Carrito</h5>
@@ -58,12 +62,12 @@
         <table class="table CartGrilla">
           <thead>
             <tr>
+              <th scope="col">Cantidad</th>
               <th scope="col">Productos</th>
               <th scope="col">Precio</th>
-              <th scope="col">Cantidad</th>
             </tr>
           </thead>
-          <tbody class="Carrito-contenedor">
+          <tbody id="Carrito-contenedor">
 
 
 
@@ -99,9 +103,32 @@
   <main>
 
     <div class="banner">
-      <h1 class="banner__titulo">Vivi conectado, vivi virtual</h1>
+      <h1 class="banner__titulo">Vivi conectado, vivi virtual.</h1>
     </div>
 
+    <div class="container-noticias">
+      <div class="noticias">
+        <div class="noticias__interno">
+          <div> <img class="logonoticias" src="./img/logocasa.png" alt="Pedi desde tu casa"></div>
+          <div>
+            <p class="textonoticias">Compra desde tu casa</p>
+          </div>
+        </div>
+        <div class="noticias__interno">
+          <div> <img class="logonoticias" src="./img/Logoofertas.png" alt="Ofertas"></div>
+          <div>
+            <p class="textonoticias"> Accede a nuestros descuentos</p>
+          </div>
+        </div>
+        <div class="noticias__interno">
+          <div> <img class="logonoticias" src="./img/metodosdepago.png" alt="metodosdepago"></div>
+          <div>
+            <p class="textonoticias"> Multiples metodos de pago</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
     <div id="producto-contenedor">
 
     </div>
@@ -117,10 +144,13 @@
   </main>
 
   <footer></footer>
-  <script src="stock.js"></script>
-  
+  <script src="./src/stock.js" type="module"></script>
+  <script src="./src/accionesCarrito.js" type="module"></script>
+  <script src="./src/actualizarCarrito.js" type="module"></script>
+  <script src="./src/storage.js" type="module"></script>
+  <script src="app.js" type="module"></script>
+  <script src="index.js" type="module"></script>
 
-  <script src="app.js"></script>
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8"
