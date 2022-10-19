@@ -8,14 +8,14 @@ procesarCompraBtn.addEventListener('click', (e) => {
     if (obtenerCarritoStorage().length === 0) {
 
         // agregar alerta
-        Toastify({
-
-            text: "esta vacio estupido",
-            
-            duration: 1000,
-            stopOnFocus: false,
-            
-            }).showToast();
+        Swal.fire({
+            title: 'Carrito Vacio!',
+            text: "Tu carrito de compras esta vacio!",
+            icon: 'warning',
+            confirmButtonColor: '#3085d6',
+            cancelButtonColor: '#d33',
+            confirmButtonText: 'Ok!'
+          })
     } else {
         location.href = "compra.html"
     }
