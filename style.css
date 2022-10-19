@@ -70,6 +70,22 @@
 
 }
 
+.botonesCompra{
+    padding: 1em 2em;
+    margin-bottom: 1rem;
+    border: none;
+    border-radius: 5px;
+    font-weight: bold;
+    letter-spacing: 5px;
+    text-transform: uppercase;
+    transition: all 1000ms;
+    font-size: 15px;
+    position: relative;
+    overflow: hidden;
+    background-color: #1D2C53;
+
+}
+
 .totalCartPrincipal .button a {
     color: #ffffff;
     text-decoration: none;
@@ -184,3 +200,14 @@ main {
 .card-img-top {
     height: 350px;
 }
+
+
+
+  .productoinvisible{
+    display:none;
+  }
+
+  #cargando{
+    display: none;
+  }
+  

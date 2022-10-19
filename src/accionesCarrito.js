@@ -78,18 +78,6 @@ const pintarCarrito = (carrito) => {
     })
 };
 
-
-const modalCarrito = document.getElementById('Carrito-contenedor')
-
-modalCarrito.addEventListener('click', (e) => {
-   e.stopPropagation();
-
-   if(e.target.classList.contains('boton-eliminar')){
-    eliminarProductoCarrito(e.target.value)
-   };
-
-})
-
 const eliminarProductoCarrito = (productoId) => {
     const carritoStorage = obtenerCarritoStorage();
     const carritoActualizado = carritoStorage.filter(producto => producto.id != productoId)
@@ -110,8 +98,14 @@ const eliminarProductoCarrito = (productoId) => {
 const botonVaciar = document.getElementById('vaciar-carrito');
 
 botonVaciar.addEventListener('click', () => {
-    carrito.length = 0
-localStorage.clear();
+    while(carrito.firstchild) {
+        carrito.removeChild(carrito.firstchild)
+    }
+    localStorage.clear();
+    return false;
+
 })
+
+
 
 export { validarProductoRepetido, agregarAlCarrito, pintarCarrito, eliminarProductoCarrito }

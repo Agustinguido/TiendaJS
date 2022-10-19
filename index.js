@@ -1,12 +1,13 @@
 import { mostrarProductos } from "./app.js";
 import { pintarCarrito } from "./src/accionesCarrito.js";
 import { actualizarTotalesCarrito } from "./src/actualizarCarrito.js";
-import { stockProductos } from "./src/stock.js";
+// import { stockProductos } from "./src/stock.js";
 import { obtenerCarritoStorage } from "./src/storage.js";
 
-document.addEventListener('DOMContentLoaded', () =>{
-    mostrarProductos(stockProductos);
 
+
+document.addEventListener('DOMContentLoaded', () =>{
+    mostrarProductos();    
 
     if(localStorage.getItem('carrito')){
         const carrito = obtenerCarritoStorage();
