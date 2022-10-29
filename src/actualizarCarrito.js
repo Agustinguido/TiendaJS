@@ -3,7 +3,7 @@ import { guardarCarritoStorage } from "./storage.js";
 
 
 const actualizarTotalesCarrito = (carrito) => {
-    const totalCantidad = carrito.reduce((acc, item) => acc + item.cantidad, 0);
+    let totalCantidad = carrito.reduce((acc, item) => acc + item.cantidad, 0);
     const totalCompra = carrito.reduce((acc, item) => acc + (item.cantidad * item.precio), 0);
 
     pintarTotalesCarrito(totalCantidad, totalCompra);

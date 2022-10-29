@@ -9,7 +9,7 @@ const contenedorProductos = document.getElementById('producto-contenedor')
 const stockProductos = await obtenerProductos();
 stockProductos.forEach((producto) => {
     const div = document.createElement('div');
-    div.classList.add('card');
+    div.classList.add('cards');
     div.innerHTML = `<div class="card" style="width: 18rem;">
                             <img src="${producto.img}" class="card-img-top" alt="...">
                             <div class="card-body">

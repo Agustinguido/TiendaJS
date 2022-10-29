@@ -1,5 +1,6 @@
 import { eliminarProductoCarrito } from "./accionesCarrito.js";
 
+
 const modalCarrito = document.getElementById('Carrito-contenedor')
 
 
@@ -11,10 +12,4 @@ modalCarrito.addEventListener('click', (e) => {
     eliminarProductoCarrito(e.target.value)
    };
 
-})
-
-
-
-
-
-
+});

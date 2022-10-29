@@ -46,8 +46,8 @@ const agregarAlCarrito = (productoId) => {
         const content = `
         <th scope="row" id=cantidad${item.id}><span class="ElementCount" width=60>${item.cantidad} </span></th>
         <td class="cartProducts"><img class="imgProductCart" src="${item.img}" alt="" width=100>  <h6 class="title">${item.nombre}</h6></td>
-        <td class="CartPrecio"> ${item.precio}</td>
-       <button id=eliminar${item.id} value='${item.id}' class="boton-eliminar">X</button>
+        <td class="CartPrecio">$${item.precio}</td>
+       <button type="button" id=eliminar${item.id} value='${item.id}' class="boton-eliminar">x</button>
         `;
 
         trElement.innerHTML = content
@@ -59,6 +59,8 @@ const agregarAlCarrito = (productoId) => {
     })
 };
 
+
+
 const pintarCarrito = (carrito) => {
     const contenedor = document.getElementById('Carrito-contenedor')
     contenedor.innerHTML = '';//Cada vez que se ejecute esta accion quedara vacia 
@@ -68,8 +70,8 @@ const pintarCarrito = (carrito) => {
         const content = `
         <th scope="row" id=cantidad${item.id}><span class="ElementCount" width=60>${item.cantidad} </span></th>
         <td class="cartProducts"><img class="imgProductCart" src="${item.img}" alt="" width=100>  <h6 class="title">${item.nombre}</h6></td>
-        <td class="CartPrecio"> ${item.precio}</td>
-       <button id=eliminar${item.id} value='${item.id}' class="boton-eliminar">X</button>
+        <td class="CartPrecio">$${item.precio}</td>
+       <button type="button" id=eliminar${item.id} value='${item.id}' class="boton-eliminar">x</button>
         `;
 
         trElement.innerHTML = content
@@ -94,18 +96,6 @@ const eliminarProductoCarrito = (productoId) => {
         
         }).showToast();
 };
-
-const botonVaciar = document.getElementById('vaciar-carrito');
-
-botonVaciar.addEventListener('click', () => {
-    while(carrito.firstchild) {
-        carrito.removeChild(carrito.firstchild)
-    }
-    localStorage.clear();
-    return false;
-
-})
-
 
 
 export { validarProductoRepetido, agregarAlCarrito, pintarCarrito, eliminarProductoCarrito }
